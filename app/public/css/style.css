@@ -1,0 +1,58 @@
+
+body {
+ 	width: 75%;
+	margin: 0px auto; 
+
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+header {
+ 	height: 100px;
+}
+
+.friend-nav {	
+	font-weight: bolder;
+	background-color: pink;
+}
+
+.navbar-brand {
+	font-weight: bolder;
+	color: white;
+	font-size: 3em;
+}
+
+.nav-link {
+	color: white;
+}
+
+header > nav {
+ 	height: 100%;
+}
+
+ main {
+ 	flex: 1 0 auto;
+}
+
+.home-card {
+	margin: 10%;
+}
+
+main h1 {
+ 	font-weight: bold;
+}
+
+main h2 {
+ 	font-weight: 300;
+}
+
+#head-nav-links {
+ 	margin-right: 50px;
+ 	margin-top: 20px;
+}
+
+#mainpanel-content {
+ 	margin: 50px;
+}
+

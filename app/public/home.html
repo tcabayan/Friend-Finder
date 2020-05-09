@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Friend Finder</title>
+
+	<!-- Link to the jQuery Library -->
+  	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+  	<!-- Including Font Awesome Icons -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
+
+	<!-- Link to reset stylesheet -->
+	<link rel="stylesheet" href="css/reset.css">
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+	<header>
+		<!--NavBar Beginning-->
+		<nav class="navbar navbar-expand-lg friend-nav">
+			<a class="navbar-brand" href="/home"><i class="fas fa-address-book"></i> Friend Finder</a>
+			
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav">
+				<li class="nav-item active">
+				  <a class="nav-link" href="/survey">Survey <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="/api/friends">API Friends List</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="https://github.com/tcabayan/Friend-Finder">GitHub Repo</a>
+				</li>
+			  </ul>
+			</div>
+		  </nav>
+		<!--NavBar End-->
+	</header>
+
+	<main>
+		<div class="container">
+			<div class="card home-card">
+				<div class="card header">
+					<h1> Friend Finder</h1>
+				</div>
+				<div class="card-body">
+					<h2>Answer a few basic questions....</h2>
+					<h2>AAANNNDDDD....</h2>
+					<h2>Find the friend with the greatest compatibility!</h2>
+						<a href="/survey">
+							<button class="btn gobtn" type="submit" name="action">Go to Survey
+								<i class="material-icons right">send</i>
+							</button>
+						</a>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="page-footer">
+		<div class="footer-copyright text-center">
+			<div class="container">
+				© 2020 Cabayan Incorporated
+			</div>
+		</div>
+	</footer>
+
+</body>
+</html>
