@@ -6,10 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Friend Finder</title>
 	
-		<!-- Link to the jQuery Library -->
-		  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	
-		  <!-- Including Font Awesome Icons -->
+		<!-- Including Font Awesome Icons -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"/>
 	
 		<!-- Link to reset stylesheet -->
@@ -245,7 +242,11 @@
                 </div>
             </div>
         </div>
-    </div>
+	</div>
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
     <script type="text/javascript" src="./app.js"></script>	
 </body>
 </html>
@@ -264,8 +265,8 @@
 
 		if(valid === true) {
 		var newUser = {
-			name: $("#name").val().trim(),
-			photo: $("#photo").val().trim(),
+			name: $("#userName").val().trim(),
+			photo: $("#userPhoto").val().trim(),
 			scores: [
 				$("#question1").val(),
 				$("#question2").val(),
@@ -280,10 +281,18 @@
 			]
 		};
 
-		$.post("/api/friends", userInput).done(function(data) {
-			$("#userMatch").html(data.matchName);
+		var currentURL = window.location.origin;
+
+		$.post(currentURL + "/api/friends", newUser, function(data) {
+				$("#bestFriend").text(data.name);
+				$("#bestFriendPhoto").attr("src", data.photo);
+				$("#bestFriendModal").modal("toggle");
+			});
+
+		$.post(currentURL + "/api/friends", newUser, (function(data) {
+			$("#userMatch").text(data.matchName);
 			$("#userMatchImage").attr("src", data.matchImage);
-			$("#resultsModal").modal("open");
+			$("#resultsModal").modal("toggle");
 			});
 		} else {
 			// If a required field is missing, show alert
