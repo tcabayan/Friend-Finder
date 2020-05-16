@@ -60,3 +60,7 @@ main h2 {
 	background-color: pink;
 	color: white;
 }
+
+img {
+	max-width: 100%;
+}
