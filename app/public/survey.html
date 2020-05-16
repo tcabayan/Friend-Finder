@@ -252,6 +252,7 @@
 
 			// Ajax call for receiving response after POST req
 			$.post(currentURL + "/api/friends", newUser, function(data) {
+				console.log(data);
 				$("#friendMatch").text(data.name);
 				$("#friendPhoto").attr("src", data.photo);
 				$("#resultsModal").modal("toggle");
